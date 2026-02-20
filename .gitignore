@@ -1,0 +1,28 @@
+# Сборка
+bin/
+obj/
+moc/
+lib/*.so*
+lib/*.a
+lib/*.lib
+lib/*.dll
+*.o
+*.user
+*.pro.user
+Makefile*
+
+# Qt
+.qmake.stash
+*.autosave
+*.qmlc
+*.jsc
+
+# Логи и кэш
+logs/
+*.log
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*~

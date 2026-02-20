@@ -1,0 +1,122 @@
+/****** maperr.rh ***************  Belenkov O.V. ****** 19/04/21 ***
+******* maperr.rh ***************  Kruzhkov A.E. ****** 02/09/16 ***
+******* maperr.rh ***************  Zheleznyakov V.A. ** 16/03/16 ***
+******* maperr.rh ***************  Savelov A.S.  ****** 20/12/18 ***
+******* maperr.rh ***************  Shishkova L.A. ***** 20/05/19 ***
+******* maperr.rh ***************  Vitsko D.A.    ***** 16/12/20 ***
+******* maperr.rh ***************  Derevyagina Zh.A.*** 30/05/21 ***
+*                                                                  *
+*              Copyright (c) PANORAMA Group 1991-2021              *
+*                      All Rights Reserved                         *
+*                                                                  *
+********************************************************************
+*                                                                  *
+*        ОПИСАНИЕ ИДЕНТИФИКАТОРОВ СООБЩЕНИЙ ДЛЯ mapErrorMessage    *
+*                                                                  *
+*******************************************************************/
+
+#ifndef MAPERR_RH
+#define MAPERR_RH
+
+// --------------------------------------------------------------
+//  ИДЕНТИФИКАТОРЫ ОШИБОК ОБРАБОТКИ ЭЛЕКТРОННОЙ КАРТЫ
+// --------------------------------------------------------------
+
+#define IDS_OK                   1  // НЕТ ОШИБОК
+#define IDS_MEM_ALLOC        60001  // ОШИБКА ВЫДЕЛЕНИЯ ПАМЯТИ
+#define IDS_MEMORY           60001  // ОШИБКА ВЫДЕЛЕНИЯ ПАМЯТИ
+#define IDS_DISK_ALLOC       60002  // НЕТ МЕСТА НА ДИСКЕ
+#define IDS_READ             60003  // ОШИБКА ЧТЕНИЯ ФАЙЛА
+#define IDS_WRITE            60004  // ОШИБКА ПРИ ЗАПИСИ НА ДИСК
+#define IDS_STRUCT           60005  // ОШИБКА СТРУКТУРЫ ДАННЫХ
+#define IDS_OPEN             60006  // ОШИБКА ОТКРЫТИЯ ФАЙЛА
+#define IDS_FILE_NOT_FOUND   60007  // ФАЙЛ НЕ НАЙДЕН
+#define IDS_PATH_NOT_FOUND   60008  // ПУТЬ НЕ НАЙДЕН
+
+#define IDS_DUPLICATE        60009  // Найдено повторяемое значение
+#define IDS_FILE_EXIST       IDS_DUPLICATE
+
+#define IDS_CLOSE            60010  // ОШИБКА ЗАКРЫТИЯ ФАЙЛА
+#define IDS_CREATE           60011  // ОШИБКА СОЗДАНИЯ ФАЙЛА
+#define IDS_CREATEOLD        600011 // ОШИБКА СОЗДАНИЯ ФАЙЛА (УСТАРЕВШЕЕ)
+#define IDS_LOCK             60012  // ФАЙЛ ЗАНЯТ СЛИШКОМ ДОЛГО
+#define IDS_WAIT             60013  // ОПЕРАЦИЯ НЕ МОЖЕТ БЫТЬ ВЫПОЛНЕНА В ДАННЫЙ МОМЕНТ
+#define IDS_CREATEDIALOG     60014  // ОШИБКА ПРИ ВЫЗОВЕ ДИАЛОГА
+#define IDS_DOERROR          60015  // ОШИБКА ПРИ ВЫЧИСЛЕНИЯХ
+#define IDS_RSCOPEN          60016  // ОШИБКА ОТКРЫТИЯ ФАЙЛА RSC
+#define IDS_LEBEUPDATE       60017  // ОШИБКА ОБНОВЛЕНИЯ ФОРМАТА ЧИСЕЛ LE\BE - НЕТ ДОСТУПА НА ЗАПИСЬ
+#define IDS_OLDFORMAT        60018  // УСТАРЕВШИЙ ФОРМАТ КООРДИНАТ НЕ ПОДДЕРЖИВАЕТСЯ. НЕОБХОДИМО СОХРАНИТЬ КАРТУ В SXF
+
+#define IDS_FILE_MANY        60020  // СЛИШКОМ МНОГО ОТКРЫТЫХ ФАЙЛОВ
+#define IDS_SOCKETERROR      60021  // ОШИБКА ПЕРЕДАЧИ ДАННЫХ ЧЕРЕЗ СОКЕТ
+#define IDS_CONNECTLIMITED   60022  // СЛИШКОМ МНОГО ПОДКЛЮЧЕНИЙ К СЕРВЕРУ (ПРЕВЫШЕНИЕ ОГРАНИЧЕНИЯ ПО ЛИЦЕНЗИИ)
+#define IDS_OLD_VERSION      60030  // УСТАРЕВШАЯ ВЕРСИЯ ДАННЫХ
+#define IDS_MODULE           60031  // НЕСОВПАДЕНИЕ ВЕРСИИ MAPACCES.DLL
+#define IDS_SERVERVERSION    60032  // УСТАРЕВШАЯ ВЕРСИЯ СЕРВЕРА, КОМАНДА НЕ ПОДДЕРЖИВАЕТСЯ
+#define IDS_SERVERACCESS     60033  // СЕРВЕР НЕ ДОСТУПЕН
+
+#define IDS_PARM             60040  // ОШИБКА ВХОДНЫХ ПАРАМЕТРОВ
+#define IDS_USERERROR        60041  // ТЕКСТ СООБЩЕНИЯ ПОЛЬЗОВАТЕЛЯ
+#define IDS_ACCESS           60050  // НЕТ ПРАВ ДОСТУПА
+#define IDS_COPYRIGHT        60060  // НЕТ ПРАВ КОПИРОВАНИЯ
+#define IDS_HIDEPRINT        60061  // ПЕЧАТЬ ДАННЫХ НЕ РАЗРЕШЕНА
+#define IDS_LOADPROGRAM      60070  // ОШИБКА ПРИ ЗАПУСКЕ ПРОГРАММЫ
+
+#define IDS_PROJECTPARM      60101  // ОШИБОЧНЫЕ ДАННЫЕ О ПРОЕКЦИИ
+#define IDS_PROJECTTYPE      60101  // ОШИБОЧНЫЕ ДАННЫЕ О ПРОЕКЦИИ
+
+#define IDS_RSCSTYLE          60104 // ОШИБКА СОСТОЯНИЯ КЛАССИФИКАТОРА
+#define IDS_LOADLIBRARY       60107 // ОШИБКА ЗАГРУЗКИ БИБЛИОТЕКИ
+#define IDS_ENTRYLIBRARY      60108 // ОШИБКА ПОИСКА ТОЧКИ ВХОДА
+#define IDS_UNKNOWNTYPE       60114 // ДАННЫЙ ТИП ИНФОРМАЦИИ НЕ ПОДДЕРЖИВАЕТСЯ
+#define IDS_NOTEDIT           60115 // ДАННЫЕ НЕ ДОСТУПНЫ ДЛЯ РЕДАКТИРОВАНИЯ
+#define IDS_NOMAP             60116 // НЕТ ОТКРЫТЫХ ВЕКТОРНЫХ КАРТ
+#define IDS_UPDATEAFTERDELETE 60117 // ОШИБКА ОБНОВЛЕНИЯ УДАЛЕННОГО ОБЪЕКТА
+
+// ОШИБКИ ПРИ ВЫЧИСЛЕНИИ ФОРМУЛ
+#define IDS_FORMULATEXT         60118 // ОШИБОЧНЫЙ ТЕКСТ ФОРМУЛЫ
+#define IDS_FORMULEBRACKETERROR 60119 // НЕСООТВЕТСТВИЕ СКОБОК
+
+#define IDS_OBJECTNOTMATCH    60120 // ОШИБКА ОБНОВЛЕНИЯ - НЕ СОВПАДЕНИЕ ОБЪЕКТОВ В ПАМЯТИ И В ФАЙЛЕ
+
+// -------------------------------------------------------------------
+//  ИДЕНТИФИКАТОРЫ ОШИБОК ОБРАБОТКИ ДАННЫХ (СООБЩЕНИЯ НЕ ВЫДАЮТСЯ)
+// -------------------------------------------------------------------
+
+#define IDS_OUTSIDE          60102  // ОБЪЕКТ ЗА ПРЕДЕЛАМИ РАЙОНА
+#define IDS_APPENDOBJECT     60103  // ОШИБКА ПРИ ДОБАВЛЕНИИ ОБЪЕКТА
+#define IDS_NOTFIND          60105  // КОД/ЗНАЧЕНИЕ НЕ НАЙДЕНО
+#define IDS_CANCEL           60106  // ПРИНУДИТЕЛЬНОЕ ЗАВЕРШЕНИЕ РАБОТЫ
+#define IDS_POINTLIMIT       60109  // ЧИСЛО ТОЧЕК БОЛЬШЕ ДОПУСТИМОГО
+
+#define IDS_DATANOCROSS      60110  // МЕТРИКА ОБЪЕКТОВ НЕ ПЕРЕСЕКАЕТСЯ
+#define IDS_DATANOADJUST     60111  // МЕТРИКА ИСХОДНОГО ОБЪЕКТА НЕЗАМКНУТА
+#define IDS_DATARESULTLIMIT  60112  // ЧИСЛО ТОЧЕК ОБЪЕКТА-РЕЗУЛЬТАТА БОЛЬШЕ ДОПУСТИМОГО
+#define IDS_DATARESULTERROR  60113  // МЕТРИКА РЕЗУЛЬТИРУЮЩЕГО ОБЪЕКТА ОШИБОЧНА
+
+#define IDS_NOMAPFOROBJECT   60120  // НЕТ ПОДХОДЯЩЕЙ КАРТЫ ДЛЯ СОХРАНЕНИЯ ОБЪЕКТА
+
+// -------------------------------------------------------------------
+//  ИДЕНТИФИКАТОРЫ ОШИБОК ОБРАБОТКИ КЛАССИФИКАТОРА ЭЛЕКТРОННОЙ КАРТЫ
+//              с 60200  по 60299
+// --------------------------------------------------------------------
+#define IDS_RSCAPPENDEXISTOBJECT  60200  // ПОПЫТКА ДОБАВИТЬ ИМЕЮЩИЙСЯ ОБЪЕКТ
+#define IDS_RSCAPPENDOBJECTERROR  60201  // ОШИБКА ПРИ ДОБАВЛЕНИИ ОБЪЕКТА
+#define IDS_RSCSTRUCTOBJECTERROR  60202  // ОШИБКА СТРУКТУРЫ ОБЪЕКТА
+#define IDS_RSCEXITSEGMENTERROR   60203  // ПОПЫТКА ЗАПИСАТЬ ПОВТОРНОЕ ИМЯ СЛОЯ
+#define IDS_RSCEXITSEMANTICERROR  60204  // ПОПЫТКА ЗАПИСАТЬ ПОВТОРНОЕ ИМЯ СЕМАНТИКИ
+#define IDS_RSCSEMANTICCODEERROR  60205  // ПОПЫТКА ЗАПИСАТЬ ПОВТОРНЫЙ КОД СЕМАНТИКИ
+#define IDS_RSCSEMANTICCODECHANGE 60206  // НЕЛЬЗЯ ИЗМЕНЯТЬ КОД СЕМАНТИКИ,ОНА ОБЯЗАТЕЛЬНА ДЛЯ ОБЪЕКТОВ ЛИБО ВЛИЯЕТ НА ВИД
+#define IDS_RSCSEMANTICCODEREPLY  60207  // ПОВТОРНЫЙ КОД СЕМАНТИКИ
+#define IDS_RSCSEMANTICTYPECHANGE 60208  // НЕЛЬЗЯ ИЗМЕНЯТЬ ТИП - СЕМАНТИКА ВЛИЯЕТ НА ВИД ОБЪЕКТОВ
+#define IDS_RSCSEMANTICREPLYCHANGE 60209 // НЕЛЬЗЯ ИЗМЕНЯТЬ ПОВТОРЯЕМОСТЬ - СЕМАНТИКА ВЛИЯЕТ НА ВИД ОБЪЕКТОВ
+#define IDS_RSCSEMANTICDEFCHANGE   60210 // НЕ СОГЛАСОВАННЫЕ УМОЛЧАНИЯ
+
+#define IDS_SENDERROR              60301 // ОШИБКА ПЕРЕДАЧИ ДАННЫХ ЧЕРЕЗ СОКЕТЫ
+#define IDS_RECVERROR              60302 // ОШИБКА ПРИЕМА ДАННЫХ ЧЕРЕЗ СОКЕТЫ
+
+#define IDS_CHECK_SCHEME_ERROR        60400 // ОШИБКА В СХЕМЕ КОНТРОЛЯ
+#define IDS_CHECK_NOREPORT_TEMPLATE   60401 // ОТСУТСТВУЕТ ШАБЛОН ОТЧЕТА
+#define IDS_CHECK_REPORT_CREATE_ERROR 60402 // ОШИБКА СОЗДАНИЯ ОТЧЕТА
+
+#endif
